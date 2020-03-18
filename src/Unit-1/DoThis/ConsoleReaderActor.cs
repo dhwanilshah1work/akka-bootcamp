@@ -28,11 +28,11 @@ namespace WinTail
                 return;
             }
 
-            // send input to the console writer to process and print
-            // YOU NEED TO FILL IN HERE
+			// send input to the console writer to process and print
+			_consoleWriterActor.Tell(read);
 
-            // continue reading messages from the console
-            // YOU NEED TO FILL IN HERE
+			// continue reading messages from the console
+			Self.Tell("continue");
         }
 
     }
